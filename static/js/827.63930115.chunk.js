@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkhome_delivery_center=self.webpackChunkhome_delivery_center||[]).push([[827],{827:function(e,n,r){r.r(n),r.d(n,{DepartmentsPage:function(){return c}});var t=r(184),u=function(){return(0,t.jsx)("ul",{})},c=function(){return(0,t.jsx)(t.Fragment,{children:(0,t.jsx)(u,{})})}}}]);
+//# sourceMappingURL=827.63930115.chunk.js.map
