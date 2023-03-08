@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/home-delivery-center/static/css/main.2c5eed58.css",
+    "main.js": "/home-delivery-center/static/js/main.a97e5011.js",
+    "index.html": "/home-delivery-center/index.html",
+    "main.2c5eed58.css.map": "/home-delivery-center/static/css/main.2c5eed58.css.map",
+    "main.a97e5011.js.map": "/home-delivery-center/static/js/main.a97e5011.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2c5eed58.css",
+    "static/js/main.a97e5011.js"
+  ]
+}
