@@ -1,4 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+import { IHistori, ITtnInfo } from '../../helpers/interfaces/historyApi';
 
 export const ttnHistoryApi = createApi({
   reducerPath: 'ttn-history',
@@ -7,8 +8,8 @@ export const ttnHistoryApi = createApi({
   }),
   tagTypes: ['history'],
   endpoints: builder => ({
-    getHistory: builder.query({
-      query: () => ({
+    getHistory: builder.query<ITtnInfo[] | [], string>({
+      query: docNumber => ({
         method: 'POST',
         url: '/',
         body: {
@@ -17,16 +18,16 @@ export const ttnHistoryApi = createApi({
           methodProperties: {
             Documents: [
               {
-                DocumentNumber: '59000914214507',
-                Phone: '+380930039288',
+                DocumentNumber: docNumber,
               },
             ],
           },
         },
       }),
+      transformResponse: (response: IHistori) => response.data,
       providesTags: ['history'],
     }),
   }),
 });
 
-export const { useGetHistoryQuery } = ttnHistoryApi;
+export const { useLazyGetHistoryQuery } = ttnHistoryApi;
