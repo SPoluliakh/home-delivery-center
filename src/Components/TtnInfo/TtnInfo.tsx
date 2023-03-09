@@ -9,7 +9,6 @@ export const TtnInfo = memo(() => {
 
   const { data } = useDetermineTTN(ttnNumber);
 
-  console.log('TtnInfo');
   return (
     <>
       {data ? (
