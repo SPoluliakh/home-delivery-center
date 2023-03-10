@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 export const Link = styled(NavLink)`
   color: rgb(118, 118, 118);
-  font-family: ${p => p.theme.fontFamily.link};
+  font-family: inherit;
   position: relative;
   text-decoration: none;
   text-shadow: ${p => p.theme.shadows.textShadow};

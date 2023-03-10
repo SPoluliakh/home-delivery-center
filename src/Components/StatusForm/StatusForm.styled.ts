@@ -26,6 +26,7 @@ export const Label = styled.label`
   }
 `;
 export const Button = styled.button`
+  font-family: inherit;
   margin-top: ${p => p.theme.space[3]}px;
   cursor: pointer;
   padding: ${p => p.theme.space[1]}px;
@@ -45,12 +46,17 @@ export const Button = styled.button`
 `;
 
 export const Input = styled.input`
+  font-family: inherit;
   border: ${p => p.theme.borders.none};
   border-bottom: ${p => p.theme.borders.statusForm};
   font-size: ${p => p.theme.fontSizes.m}px;
   background-color: transparent;
   outline: none;
   color: ${p => p.theme.colors.text};
+
+  ::placeholder {
+    font-family: inherit;
+  }
 
   @media (min-width: 768px) {
     padding: ${p => p.theme.space[1]}px ${p => p.theme.space[2]}px;

@@ -10,8 +10,12 @@ export const Section = styled.section`
 export const List = styled.ul`
   list-style: none;
   margin-top: ${p => p.theme.space[2]}px;
-  max-height: 450px;
+  max-height: 240px;
   overflow-y: auto;
+
+  @media (min-width: 768px) {
+    max-height: 450px;
+  }
 `;
 
 export const ListItem = styled.li`
@@ -34,9 +38,9 @@ export const DeleteBtn = styled.button`
   border: none;
   cursor: pointer;
   margin-left: ${p => p.theme.space[2]}px;
-  transition: transform 300ms linear;
+  transition: 300ms linear;
 
   :hover {
-    transform: scale(1.4);
+    color: red;
   }
 `;

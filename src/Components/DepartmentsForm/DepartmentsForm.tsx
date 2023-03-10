@@ -9,7 +9,11 @@ interface IFormElements extends HTMLFormControlsCollection {
   id: HTMLInputElement;
 }
 
-export const DepartmentsForm = () => {
+interface IProps {
+  toggleModal?: () => void;
+}
+
+export const DepartmentsForm = ({ toggleModal }: IProps) => {
   const [getDepartments, { isLoading }] = useLazyGetDepartmentsListQuery();
 
   const [, setSearchParams] = useSearchParams();
@@ -24,6 +28,7 @@ export const DepartmentsForm = () => {
     };
 
     getDepartments(data);
+    toggleModal && toggleModal();
 
     const param1 = city.value !== '';
     const param2 = id.value !== '';

@@ -3,18 +3,12 @@ import styled from 'styled-components';
 export const List = styled.ul`
   list-style: none;
   text-align: center;
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
-
-  /* border: ${p => p.theme.borders.statusForm};
-  padding: ${p => p.theme.space[2]}px;
-  margin-bottom: ${p => p.theme.space[3]}px;
-  border-radius: ${p => p.theme.radii.normal};
 
   @media (min-width: 768px) {
-    flex-direction: row;
+    display: flex;
     justify-content: center;
-    padding: ${p => p.theme.space[4]}px;
-  } */
+
+    flex-wrap: wrap;
+    margin-right: -20px;
+  }
 `;
