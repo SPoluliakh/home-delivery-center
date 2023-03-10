@@ -4,6 +4,7 @@ import { Loader } from '../Loader/Loader';
 import { DepartmentsListItem } from './DepartmentsListItem/DepartmentsListItem';
 import { useGetSearchParams } from '../../hooks/useGetSearchParams';
 import { Pagination } from '../Pagination/Pagination';
+import * as SC from './DepartmentsList.styled';
 
 export const DepartmentsList = () => {
   const [getDepartments, { data, isLoading }] =
@@ -19,9 +20,10 @@ export const DepartmentsList = () => {
   const totalDeparts = data?.info.totalCount ?? 1;
   const disable = totalDeparts <= Number(page) * 20;
   return (
-    <>
+    <section>
+      <h2 className="visually-hidden"> Список відділень </h2>
       {isLoading && <Loader />}
-      <ul>
+      <SC.List>
         {data?.data.map(
           ({
             CityDescription,
@@ -38,8 +40,8 @@ export const DepartmentsList = () => {
             />
           )
         )}
-      </ul>
+      </SC.List>
       <Pagination disabled={disable} />
-    </>
+    </section>
   );
 };

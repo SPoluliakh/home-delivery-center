@@ -3,14 +3,15 @@ import { Outlet } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import { MainNavigation } from '../MainNavigation/MainNavigation';
 import { Logo } from '../Logo/Logo';
+import * as SC from './Layout.styled';
 
 export const Layout = () => {
   return (
     <>
-      <div className="container">
+      <SC.Wrap className="container">
         <Logo />
         <MainNavigation />
-      </div>
+      </SC.Wrap>
       <main className="container">
         <Suspense fallback={null}>
           <Outlet />

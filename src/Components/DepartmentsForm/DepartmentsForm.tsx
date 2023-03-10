@@ -2,6 +2,7 @@ import { useSearchParams } from 'react-router-dom';
 import { FormEvent } from 'react';
 import { useLazyGetDepartmentsListQuery } from '../../Redux/departmentsApiOperations/departmentsApiOperations';
 import { Loader } from '../Loader/Loader';
+import * as SC from './DepartmentsForm.styled';
 
 interface IFormElements extends HTMLFormControlsCollection {
   city: HTMLInputElement;
@@ -43,17 +44,15 @@ export const DepartmentsForm = () => {
   return (
     <>
       {isLoading && <Loader />}
-      <form onSubmit={handleSubmit}>
-        <label>
-          Місто
-          <input type="text" placeholder="Київ" name="city" />
-        </label>
-        <label>
-          Номер відділення
-          <input type="text" placeholder="151 " name="id" />
-        </label>
-        <button type="submit">Пошук</button>
-      </form>
+      <SC.Form onSubmit={handleSubmit}>
+        <SC.Label htmlFor="citi">Місто</SC.Label>
+        <SC.Input id="city" type="text" placeholder="Київ" name="city" />
+
+        <SC.Label htmlFor="id">Номер відділення </SC.Label>
+        <SC.Input id="id" type="text" placeholder="151 " name="id" />
+
+        <SC.Button type="submit">Пошук</SC.Button>
+      </SC.Form>
     </>
   );
 };

@@ -5,6 +5,6 @@ interface nav {
 }
 
 export const navigationList: nav[] = [
-  { name: 'Check TTN', href: '/departure-statusList', id: 1 },
-  { name: 'Department`s list', href: '/departments-list', id: 2 },
+  { name: 'Перевірити ТТН', href: '/departure-statusList', id: 1 },
+  { name: 'Список відділень', href: '/departments-list', id: 2 },
 ];

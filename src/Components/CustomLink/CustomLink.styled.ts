@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 export const Link = styled(NavLink)`
-  color: black;
+  color: rgb(118, 118, 118);
   font-family: ${p => p.theme.fontFamily.link};
   position: relative;
   text-decoration: none;
@@ -20,7 +20,7 @@ export const Link = styled(NavLink)`
   }
   :hover:not(.active),
   :focus:not(.active) {
-    color: ${p => p.theme.colors.text};
+    color: rgb(118, 118, 118);
   }
 
   &::after {
@@ -30,7 +30,7 @@ export const Link = styled(NavLink)`
     left: 0;
     width: 100%;
     height: 1px;
-    background-color: ${p => p.theme.colors.deleteButton};
+    background-color: rgb(118, 118, 118);
     scale: 0;
     transition: 500ms linear;
   }
