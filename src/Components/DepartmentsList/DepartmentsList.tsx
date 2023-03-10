@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, memo } from 'react';
 import { useLazyGetDepartmentsListQuery } from '../../Redux/departmentsApiOperations/departmentsApiOperations';
 import { Loader } from '../Loader/Loader';
 import { DepartmentsListItem } from './DepartmentsListItem/DepartmentsListItem';
@@ -6,7 +6,7 @@ import { useGetSearchParams } from '../../hooks/useGetSearchParams';
 import { Pagination } from '../Pagination/Pagination';
 import * as SC from './DepartmentsList.styled';
 
-export const DepartmentsList = () => {
+export const DepartmentsList = memo(() => {
   const [getDepartments, { data, isLoading }] =
     useLazyGetDepartmentsListQuery();
 
@@ -18,6 +18,7 @@ export const DepartmentsList = () => {
 
   const totalDeparts = data?.info.totalCount ?? 1;
   const disable = totalDeparts <= Number(page) * 20;
+
   return (
     <section>
       <h2 className="visually-hidden"> Список відділень </h2>
@@ -43,4 +44,4 @@ export const DepartmentsList = () => {
       <Pagination disabled={disable} />
     </section>
   );
-};
+});
