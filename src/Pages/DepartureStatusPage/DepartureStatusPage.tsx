@@ -10,6 +10,7 @@ import { StatusForm } from '../../Components/StatusForm/StatusForm';
 import { TtnInfo } from '../../Components/TtnInfo/TtnInfo';
 import { TtnsHistory } from '../../Components/TtnsHistory/TtnsHistory';
 import { Loader } from '../../Components/Loader/Loader';
+import * as SC from './DepartureStatusPage.styled';
 
 export const DepartureStatusPage = () => {
   const [ttnNumber, setTtnNumber] = useState<string>('');
@@ -56,8 +57,10 @@ export const DepartureStatusPage = () => {
         inputValue={ttnNumber}
         onChange={handleInputChange}
       />
-      <TtnInfo />
-      <TtnsHistory onhandleClick={setTtnNumber} />
+      <SC.Wrap>
+        <TtnInfo />
+        <TtnsHistory onhandleClick={setTtnNumber} />
+      </SC.Wrap>
     </>
   );
 };

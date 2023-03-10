@@ -31,25 +31,21 @@ export const theme: ITheme = {
     heading: 1.125,
   },
   colors: {
-    deleteButton: 'brown',
-    navBcg: 'whitesmoke',
-    basketCount: 'yellow',
-    basketItem: 'white',
+    text: 'brown',
+    button: '#673ab7',
+    hoverBtn: '#94381b',
     backdropBackground: '#101510a1',
-
-    hoverBtn: 'black',
-    text: '#d71e1e',
     spanText: 'white',
-    linkText: 'black',
+    navBcg: 'black',
   },
   radii: {
     none: '0',
-    normal: '10px',
+    normal: '5px',
     round: '50%',
   },
   borders: {
     none: 'none',
-    navBorder: '1px solid whitesmoke ',
+    statusForm: '1px solid brown ',
   },
   shadows: {
     boxShadow: '0px 0px 2px 1px wheat',

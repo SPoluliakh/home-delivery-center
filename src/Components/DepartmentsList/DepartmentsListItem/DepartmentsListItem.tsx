@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { ISchedule, ISize } from '../../../helpers/interfaces/departments';
+// import * as SC from './DepartmentsListItem.styled';
 
 interface IProps {
   cityName: string;

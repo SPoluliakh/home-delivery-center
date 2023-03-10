@@ -25,6 +25,9 @@ export const ttnListSlice = createSlice({
     addTtn(state, { payload }: IPayload) {
       state.ttn.push(payload);
     },
+    deleteTtn(state, action: { payload: string }) {
+      state.ttn = state.ttn.filter(ttn => ttn.id !== action.payload);
+    },
   },
 });
 
@@ -39,4 +42,4 @@ export const persistTtnListReducer = persistReducer(
 );
 
 // Actions
-export const { addTtn } = ttnListSlice.actions;
+export const { addTtn, deleteTtn } = ttnListSlice.actions;
