@@ -15,7 +15,6 @@ export const DepartmentsListItem = ({
   schedule: { Friday, Monday, Saturday, Sunday, Thursday, Tuesday, Wednesday },
 }: IProps) => {
   const [showSchedule, setShowSchedule] = useState<boolean>(false);
-  console.log(description);
 
   const handleClick = () => {
     setShowSchedule(!showSchedule);

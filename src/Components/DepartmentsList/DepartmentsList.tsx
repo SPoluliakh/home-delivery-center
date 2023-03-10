@@ -1,26 +1,28 @@
-import { useEffect } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 import { useLazyGetDepartmentsListQuery } from '../../Redux/departmentsApiOperations/departmentsApiOperations';
 import { Loader } from '../Loader/Loader';
 import { DepartmentsListItem } from './DepartmentsListItem/DepartmentsListItem';
+import { useGetSearchParams } from '../../hooks/useGetSearchParams';
+import { Pagination } from '../Pagination/Pagination';
 
 export const DepartmentsList = () => {
   const [getDepartments, { data, isLoading }] =
     useLazyGetDepartmentsListQuery();
 
-  const [searchParams] = useSearchParams();
-  const city = searchParams.get('city') ?? '';
-  const id = searchParams.get('id') ?? '';
+  const { city, id, page } = useGetSearchParams();
+  console.log(page);
 
   useEffect(() => {
-    getDepartments({ city, id });
-  }, [getDepartments, city, id]);
+    getDepartments({ city, id, page });
+  }, [getDepartments, city, id, page]);
 
+  const totalDeparts = data?.info.totalCount ?? 1;
+  const disable = totalDeparts <= Number(page) * 20;
   return (
     <>
       {isLoading && <Loader />}
       <ul>
-        {data?.map(
+        {data?.data.map(
           ({
             CityDescription,
             Description,
@@ -37,6 +39,7 @@ export const DepartmentsList = () => {
           )
         )}
       </ul>
+      <Pagination disabled={disable} />
     </>
   );
 };
