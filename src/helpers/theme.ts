@@ -9,7 +9,7 @@ interface ITheme {
 export const theme: ITheme = {
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   fontFamily: {
-    link: 'Source Sans Pro',
+    link: 'Libre Baskerville',
     Text: 'Caveat ',
   },
   fontSizes: {
@@ -37,6 +37,7 @@ export const theme: ITheme = {
     backdropBackground: '#101510a1',
     spanText: 'white',
     navBcg: 'black',
+    natrul: 'rgb(118, 118, 118)',
   },
   radii: {
     none: '0',

@@ -1,6 +1,7 @@
 import { MouseEvent } from 'react';
 import { useGetSearchParams } from '../../hooks/useGetSearchParams';
 import { windowScroll } from '../../helpers/smooseScroll';
+import * as SC from './Pagination.styled';
 
 interface IProps {
   disabled: boolean;
@@ -28,25 +29,25 @@ export const Pagination = ({ disabled }: IProps) => {
 
   return (
     <>
-      <div>
-        <button
+      <SC.Wrap>
+        <SC.Button
           name="prev"
           type="button"
           onClick={pageCount}
           disabled={page === '1'}
         >
-          попередня
-        </button>
-        <p>{page}</p>
-        <button
+          назад
+        </SC.Button>
+        <SC.Count>{page}</SC.Count>
+        <SC.Button
           name="next"
           type="button"
           onClick={pageCount}
           disabled={disabled}
         >
-          наступна
-        </button>
-      </div>
+          вперед
+        </SC.Button>
+      </SC.Wrap>
     </>
   );
 };

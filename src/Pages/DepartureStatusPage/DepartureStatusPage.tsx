@@ -25,7 +25,7 @@ export const DepartureStatusPage = () => {
 
     const regex = /^([0-9]{14})$/;
     if (!regex.test(ttnNumber)) {
-      toast.warn(`Неправильний номер накладної`);
+      toast.warn(`Невірний номер накладної`);
       return;
     }
 

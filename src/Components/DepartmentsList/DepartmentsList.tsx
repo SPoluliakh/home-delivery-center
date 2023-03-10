@@ -11,7 +11,6 @@ export const DepartmentsList = () => {
     useLazyGetDepartmentsListQuery();
 
   const { city, id, page } = useGetSearchParams();
-  console.log(page);
 
   useEffect(() => {
     getDepartments({ city, id, page });

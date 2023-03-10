@@ -26,6 +26,7 @@ export const Label = styled.label`
   }
 `;
 export const Button = styled.button`
+  font-family: inherit;
   margin-top: ${p => p.theme.space[3]}px;
   cursor: pointer;
   padding: ${p => p.theme.space[2]}px ${p => p.theme.space[3]}px;
@@ -52,6 +53,10 @@ export const Input = styled.input`
   outline: none;
   color: ${p => p.theme.colors.text};
   margin-bottom: ${p => p.theme.space[3]}px;
+
+  ::placeholder {
+    font-family: inherit;
+  }
 
   @media (min-width: 768px) {
     margin-right: ${p => p.theme.space[4]}px;

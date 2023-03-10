@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { ISchedule, ISize } from '../../../helpers/interfaces/departments';
-// import * as SC from './DepartmentsListItem.styled';
+import { GrSchedule } from 'react-icons/gr';
+import * as SC from './DepartmentsListItem.styled';
 
 interface IProps {
   cityName: string;
@@ -21,26 +22,30 @@ export const DepartmentsListItem = ({
     setShowSchedule(!showSchedule);
   };
   return (
-    <li>
-      <p>місто: {cityName}</p>
+    <SC.Item>
+      <p>
+        <SC.TitleInfo>місто: </SC.TitleInfo>
+        {cityName}
+      </p>
       <p>{description}</p>
       <p>
-        розміри посилки: висота - {Height}, ширина - {Width}, довжина -{Length}
+        <SC.TitleInfo>розміри посилки:</SC.TitleInfo> висота - {Height}, ширина
+        - {Width}, довжина -{Length}
       </p>
-      <button onClick={handleClick} type="button">
-        Графік роботи
-      </button>
+      <SC.Button onClick={handleClick} type="button">
+        <GrSchedule size={24} />
+      </SC.Button>
       {showSchedule && (
-        <ul>
-          <li>понеділок -{Monday},</li>
-          <li>вівторок -{Thursday},</li>
-          <li>середа -{Wednesday},</li>
-          <li>четвер -{Tuesday},</li>
-          <li>п'ятниця -{Friday},</li>
-          <li>субота -{Saturday},</li>
-          <li>неділя -{Sunday}</li>
-        </ul>
+        <SC.InnerList>
+          <li>понеділок: {Monday},</li>
+          <li>вівторок: {Thursday},</li>
+          <li>середа: {Wednesday},</li>
+          <li>четвер: {Tuesday},</li>
+          <li>п'ятниця: {Friday},</li>
+          <li>субота: {Saturday},</li>
+          <li>неділя: {Sunday}</li>
+        </SC.InnerList>
       )}
-    </li>
+    </SC.Item>
   );
 };
