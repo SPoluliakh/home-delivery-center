@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useLazyGetDepartmentsListQuery } from '../../Redux/departmentsApiOperations/departmentsApiOperations';
 import { Loader } from '../Loader/Loader';
 import { DepartmentsListItem } from './DepartmentsListItem/DepartmentsListItem';
