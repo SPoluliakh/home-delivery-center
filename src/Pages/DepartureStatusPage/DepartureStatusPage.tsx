@@ -3,7 +3,7 @@ import { toast } from 'react-toastify';
 import { nanoid } from 'nanoid';
 import { ChangeEvent, FormEvent, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useLazyGetHistoryQuery } from '../../Redux/ttnHistoryApiOperations/ttnHistoryOperations';
+import { useLazyGetHistoryQuery } from '../../Redux/ttnStatusApiOperations/ttnStatusOperations';
 import { addTtn } from '../../Redux/ttnListReducer/ttnListReducer';
 import { ttnListSelector } from '../../Redux/selectors/selectors';
 import { StatusForm } from '../../Components/StatusForm/StatusForm';

@@ -1,7 +1,7 @@
 import { useSearchParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { ttnListSelector } from '../../Redux/selectors/selectors';
-import { useLazyGetHistoryQuery } from '../../Redux/ttnHistoryApiOperations/ttnHistoryOperations';
+import { useLazyGetHistoryQuery } from '../../Redux/ttnStatusApiOperations/ttnStatusOperations';
 
 interface IProps {
   onhandleClick: (data: string) => void;
@@ -19,7 +19,6 @@ export const TtnsHistory = ({ onhandleClick }: IProps) => {
     getTtnHistori(ttn.ttnNumber);
     setSearchParams({ ttnNumber: ttn.ttnNumber });
   };
-  console.log('TtnsHistory-------');
   return (
     <ul>
       {list.map(({ ttnNumber, id }) => (

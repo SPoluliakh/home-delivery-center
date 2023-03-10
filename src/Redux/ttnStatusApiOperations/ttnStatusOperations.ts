@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { IHistori, ITtnInfo } from '../../helpers/interfaces/historyApi';
 
-export const ttnHistoryApi = createApi({
+export const ttnStatusApi = createApi({
   reducerPath: 'ttn-history',
   baseQuery: fetchBaseQuery({
     baseUrl: 'https://api.novaposhta.ua/v2.0/json/',
@@ -30,4 +30,4 @@ export const ttnHistoryApi = createApi({
   }),
 });
 
-export const { useLazyGetHistoryQuery } = ttnHistoryApi;
+export const { useLazyGetHistoryQuery } = ttnStatusApi;

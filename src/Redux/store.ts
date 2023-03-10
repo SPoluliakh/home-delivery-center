@@ -8,16 +8,18 @@ import {
   PURGE,
   REGISTER,
 } from 'redux-persist';
-import { ttnHistoryApi } from './ttnHistoryApiOperations/ttnHistoryOperations';
+import { ttnStatusApi } from './ttnStatusApiOperations/ttnStatusOperations';
 import {
   persistTtnListReducer,
   ttnListSlice,
 } from './ttnListReducer/ttnListReducer';
+import { departmentsApi } from './departmentsApiOperations/departmentsApiOperations';
 
 export const store = configureStore({
   reducer: {
     [ttnListSlice.name]: persistTtnListReducer,
-    [ttnHistoryApi.reducerPath]: ttnHistoryApi.reducer,
+    [ttnStatusApi.reducerPath]: ttnStatusApi.reducer,
+    [departmentsApi.reducerPath]: departmentsApi.reducer,
   },
   middleware: getDefaultMiddleware => [
     ...getDefaultMiddleware({
@@ -25,7 +27,8 @@ export const store = configureStore({
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
       },
     }),
-    ttnHistoryApi.middleware,
+    ttnStatusApi.middleware,
+    departmentsApi.middleware,
   ],
 });
 
