@@ -46,6 +46,7 @@ export const Button = styled.button`
 `;
 
 export const Input = styled.input`
+  font-family: inherit;
   border: ${p => p.theme.borders.none};
   border-bottom: ${p => p.theme.borders.statusForm};
   font-size: ${p => p.theme.fontSizes.m}px;

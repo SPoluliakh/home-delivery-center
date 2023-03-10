@@ -7,7 +7,6 @@ export const Form = styled.form`
 
   border: ${p => p.theme.borders.statusForm};
   padding: ${p => p.theme.space[2]}px;
-  /* margin-bottom: ${p => p.theme.space[3]}px; */
   border-radius: ${p => p.theme.radii.normal};
 
   @media (min-width: 768px) {
@@ -47,6 +46,7 @@ export const Button = styled.button`
 `;
 
 export const Input = styled.input`
+  font-family: inherit;
   border: ${p => p.theme.borders.none};
   border-bottom: ${p => p.theme.borders.statusForm};
   font-size: ${p => p.theme.fontSizes.m}px;
