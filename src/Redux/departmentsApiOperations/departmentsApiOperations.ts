@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import {
-  //   IDepartments,
+  IDepartments,
   IDepartInfo,
 } from '../../helpers/interfaces/departments';
 
@@ -16,8 +16,8 @@ export const departmentsApi = createApi({
   }),
   tagTypes: ['departments'],
   endpoints: builder => ({
-    getDepartmentsList: builder.query<IDepartInfo, IData>({
-      query: ({ city = 'Київ', id = '1' }) => ({
+    getDepartmentsList: builder.query<IDepartInfo[], IData>({
+      query: ({ city, id }) => ({
         method: 'POST',
         url: '/',
         body: {
@@ -31,7 +31,7 @@ export const departmentsApi = createApi({
           },
         },
       }),
-      //   transformResponse: (response: IDepartments) => response.data,
+      transformResponse: (response: IDepartments) => response.data,
       providesTags: ['departments'],
     }),
   }),

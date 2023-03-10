@@ -62,7 +62,7 @@ export interface IDepartInfo {
   WorkInMobileAwis: string;
 }
 
-interface ISchedule {
+export interface ISchedule {
   Friday: string;
   Monday: string;
   Saturday: string;
@@ -72,7 +72,7 @@ interface ISchedule {
   Wednesday: string;
 }
 
-interface ISize {
+export interface ISize {
   Width: number;
   Height: number;
   Length: number;
