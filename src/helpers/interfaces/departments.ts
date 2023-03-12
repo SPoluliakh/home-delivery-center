@@ -77,3 +77,16 @@ export interface ISize {
   Height: number;
   Length: number;
 }
+
+export interface ICustomData {
+  data: [
+    {
+      CityDescription: string;
+      Description: string;
+      id: string;
+      ReceivingLimitationsOnDimensions: ISize;
+      Schedule: ISchedule;
+    }
+  ];
+  info: { totalCount: number };
+}

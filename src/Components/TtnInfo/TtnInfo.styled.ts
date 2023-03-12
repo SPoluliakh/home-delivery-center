@@ -8,6 +8,7 @@ export const Section = styled.section`
     border-radius: ${p => p.theme.radii.normal};
     padding: ${p => p.theme.space[4]}px;
     width: 400px;
+    background-color: ${p => p.theme.colors.navBcg};
   }
   @media (min-width: 1200px) {
     width: 700px;

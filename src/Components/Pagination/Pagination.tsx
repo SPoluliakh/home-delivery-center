@@ -7,7 +7,7 @@ interface IProps {
   disabled: boolean;
 }
 
-export const Pagination = ({ disabled }: IProps) => {
+export const Pagination = ({ disabled = false }: IProps) => {
   const { page, city, setSearchParams } = useGetSearchParams();
 
   const pageCount = (evt: MouseEvent<HTMLButtonElement>) => {

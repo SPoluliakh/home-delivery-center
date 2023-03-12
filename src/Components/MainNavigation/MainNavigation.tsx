@@ -17,7 +17,7 @@ export const MainNavigation = () => {
     <nav>
       {!innerWidth && (
         <SC.BurgerButton onClick={toggleMenu} type="button">
-          <FaAlignJustify size="24" fill="brown" />
+          <FaAlignJustify size="24" fill="#009688" />
         </SC.BurgerButton>
       )}
 

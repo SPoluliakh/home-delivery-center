@@ -4,6 +4,7 @@ export const Item = styled.li`
   border-bottom: ${p => p.theme.borders.statusForm};
   border-top: ${p => p.theme.borders.statusForm};
   padding: ${p => p.theme.space[2]}px;
+  background-color: ${p => p.theme.colors.navBcg};
 
   @media (min-width: 768px) {
     flex-basis: calc(100% / 2 - 20px);

@@ -4,6 +4,7 @@ export const Form = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: black;
 
   border: ${p => p.theme.borders.statusForm};
   padding: ${p => p.theme.space[2]}px;
@@ -32,11 +33,12 @@ export const Button = styled.button`
   padding: ${p => p.theme.space[1]}px;
   border-radius: ${p => p.theme.radii.normal};
   background-color: ${p => p.theme.colors.button};
-  color: ${p => p.theme.colors.color};
+  color: ${p => p.theme.colors.navBcg};
   transition: 300ms linear;
 
   :hover {
     background-color: ${p => p.theme.colors.hoverBtn};
+    color: ${p => p.theme.colors.spanText};
   }
 
   @media (min-width: 768px) {
