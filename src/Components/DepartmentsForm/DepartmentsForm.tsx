@@ -14,7 +14,7 @@ interface IProps {
 }
 
 export const DepartmentsForm = ({ toggleModal }: IProps) => {
-  const [getDepartments, { isLoading }] = useLazyGetDepartmentsListQuery();
+  const [, { isLoading }] = useLazyGetDepartmentsListQuery();
 
   const [, setSearchParams] = useSearchParams();
 
@@ -22,12 +22,7 @@ export const DepartmentsForm = ({ toggleModal }: IProps) => {
     evt.preventDefault();
 
     const { city, id } = evt.currentTarget.elements as IFormElements;
-    const data = {
-      city: city.value,
-      id: id.value,
-    };
 
-    getDepartments(data);
     toggleModal && toggleModal();
 
     const param1 = city.value !== '';

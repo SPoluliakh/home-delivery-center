@@ -1,5 +1,8 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { IDepartments } from '../../helpers/interfaces/departments';
+import {
+  IDepartments,
+  ICustomData,
+} from '../../helpers/interfaces/departments';
 
 interface IData {
   city: string;
@@ -10,24 +13,14 @@ interface IData {
 export const departmentsApi = createApi({
   reducerPath: 'departments',
   baseQuery: fetchBaseQuery({
-    baseUrl: 'https://api.novaposhta.ua/v2.0/json/',
+    baseUrl: 'https://post-service-48jw.onrender.com/departments',
   }),
   tagTypes: ['departments'],
   endpoints: builder => ({
-    getDepartmentsList: builder.query<IDepartments, IData>({
+    getDepartmentsList: builder.query<IDepartments | ICustomData, IData>({
       query: ({ city, id, page = '1' }) => ({
-        method: 'POST',
-        url: '/',
-        body: {
-          modelName: 'Address',
-          calledMethod: 'getWarehouses',
-          methodProperties: {
-            CityName: city,
-            Page: page,
-            Limit: '20',
-            WarehouseId: id,
-          },
-        },
+        method: 'GET',
+        url: `/?cityName=${city}&page=${page}&limit=20&id=${id}`,
       }),
       providesTags: ['departments'],
     }),

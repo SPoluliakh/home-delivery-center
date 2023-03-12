@@ -4,6 +4,7 @@ import { Loader } from '../Loader/Loader';
 import { DepartmentsListItem } from './DepartmentsListItem/DepartmentsListItem';
 import { useGetSearchParams } from '../../hooks/useGetSearchParams';
 import { Pagination } from '../Pagination/Pagination';
+import { NoInfo } from '../NoInfo/NoInfo';
 import * as SC from './DepartmentsList.styled';
 
 export const DepartmentsList = memo(() => {
@@ -21,10 +22,11 @@ export const DepartmentsList = memo(() => {
 
   return (
     <section>
+      {!data?.info.totalCount && !isLoading && <NoInfo />}
       <h2 className="visually-hidden"> Список відділень </h2>
       {isLoading && <Loader />}
       <SC.List>
-        {data?.data.map(
+        {data?.data?.map(
           ({
             CityDescription,
             Description,

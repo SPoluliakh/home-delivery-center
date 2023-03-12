@@ -31,13 +31,14 @@ export const theme: ITheme = {
     heading: 1.125,
   },
   colors: {
-    text: 'brown',
-    button: '#673ab7',
-    hoverBtn: '#94381b',
+    text: '#ffa500c9',
+    button: '#009688',
+    hoverBtn: '#00968800',
     backdropBackground: '#101510a1',
     spanText: 'white',
     navBcg: 'black',
     natrul: 'rgb(118, 118, 118)',
+    gray: 'rgb(118, 118, 118)',
   },
   radii: {
     none: '0',
@@ -46,7 +47,7 @@ export const theme: ITheme = {
   },
   borders: {
     none: 'none',
-    statusForm: '1px solid brown ',
+    statusForm: '1px solid #ffa500c9 ',
   },
   shadows: {
     boxShadow: '0px 0px 2px 1px wheat',

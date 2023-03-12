@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import { MainNavigation } from '../MainNavigation/MainNavigation';
 import { Logo } from '../Logo/Logo';
+import { Loader } from '../Loader/Loader';
 import * as SC from './Layout.styled';
 
 export const Layout = () => {
@@ -13,7 +14,7 @@ export const Layout = () => {
         <MainNavigation />
       </SC.Wrap>
       <main className="container">
-        <Suspense fallback={null}>
+        <Suspense fallback={<Loader />}>
           <Outlet />
         </Suspense>
       </main>

@@ -6,6 +6,7 @@ export const Section = styled.section`
   padding: ${p => p.theme.space[3]}px;
   text-align: center;
   margin-bottom: ${p => p.theme.space[3]}px;
+  background-color: black;
 `;
 export const List = styled.ul`
   list-style: none;

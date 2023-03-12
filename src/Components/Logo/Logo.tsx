@@ -5,7 +5,7 @@ export const Logo = () => {
   return (
     <SC.HeartWrap>
       <p>
-        <FaBookReader size={24} /> <SC.Heart>💛</SC.Heart>
+        <FaBookReader size={24} fill="#009688" /> <SC.Heart>💛</SC.Heart>
         <SC.HeartTwo>💙</SC.HeartTwo>
       </p>
     </SC.HeartWrap>
