@@ -31,6 +31,9 @@ export const Button = styled.button`
   cursor: pointer;
   padding: ${p => p.theme.space[2]}px ${p => p.theme.space[3]}px;
   border-radius: ${p => p.theme.radii.normal};
+
+  border: ${p => p.theme.borders.button};
+
   background-color: ${p => p.theme.colors.button};
   color: ${p => p.theme.colors.navBcg};
   transition: 300ms linear;

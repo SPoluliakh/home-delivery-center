@@ -48,6 +48,7 @@ export const theme: ITheme = {
   borders: {
     none: 'none',
     statusForm: '1px solid #ffa500c9 ',
+    button: '1px solid #009688 ',
   },
   shadows: {
     boxShadow: '0px 0px 2px 1px wheat',
