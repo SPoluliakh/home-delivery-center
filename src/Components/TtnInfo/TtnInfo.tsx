@@ -18,13 +18,13 @@ export const TtnInfo = memo(() => {
           </SC.TextInfo>
           <SC.TextInfo>
             <SC.TitleInfo>Відправлено: </SC.TitleInfo>
-            {(data as { recipientAdress: string }).recipientAdress}-
-            {(data as { recipient: string }).recipient}.
+            {(data as { senderAdress: string }).senderAdress}-
+            {(data as { sender: string }).sender}.
           </SC.TextInfo>
           <SC.TextInfo>
             <SC.TitleInfo> Отримано: </SC.TitleInfo>
-            {(data as { senderAdress: string }).senderAdress}-
-            {(data as { sender: string }).sender}.
+            {(data as { recipientAdress: string }).recipientAdress}-
+            {(data as { recipient: string }).recipient}.
           </SC.TextInfo>
         </>
       ) : (
